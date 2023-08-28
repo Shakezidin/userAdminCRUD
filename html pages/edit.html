@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>delete</title>
+</head>
+<body>
+   
+    <form method="post" action="/useredited">
+            <div class="form-outline flex-fill mb-0">
+                <input type="text" name="firstname" class="form-control" value="{{ .temp_user.First_Name }}"/>
+                <label class="form-label">First Name</label>
+            </div>
+            <div class="form-outline flex-fill mb-0">
+                <input type="text" name="lastname" class="form-control" value="{{ .temp_user.Last_Name }}" />
+                <label class="form-label">Last Name</label>
+            </div>
+            <div class="form-outline flex-fill mb-0">
+                <input type="text" name="username" class="form-control" value="{{ .temp_user.UserName }}"/>
+                <label class="form-label" for="form3Example1c">Username</label>
+            </div>
+            <div class="form-outline flex-fill mb-0">
+                <input type="email" name="email" class="form-control" value="{{ .temp_user.Email }}"/>
+                <label class="form-label">Your Email</label>
+            </div>
+            <div class="form-outline flex-fill mb-0">
+                <input type="password" name="password" class="form-control" value="{{ .temp_user.Password }}"/>
+                <label class="form-label">Password</label>
+            </div>
+            <div>
+                <input type="hidden" name="id" value="{{ .temp_user.Id }}">
+                <button type="submit">Save</button>
+            </div>
+            
+    </form>
+    
+</body>
+</html>
